@@ -15,8 +15,7 @@ class Battlefield:
             self.robot.attack(self.dinosaur)
             print(self.dinosaur.name, self.dinosaur.health)
         elif self.robot.alive or self.robot.alive == False:
-            return self.winner
-        print(self.display_winner)
+            print(self.display_winner)
 
     def display_welcome(self):
         self.greeting = "Welcome to Robot V Dinosaur 2022"

@@ -7,10 +7,8 @@ class Robot:
         self.active_weapon = Weapon("Laser Sword", 10)
 
     def attack(self, dinosaur):
-        self.active_weapon = dinosaur.attack
-        self.health -= dinosaur.attack_power
+       dinosaur.health -= self.active_weapon.attack_power
+       print(f'{dinosaur.name} now has {dinosaur.health} remaining')
 
-    def alive(self):
-        if self.health == 0:
-            self.alive = False
-            return self.alive
+    def is_alive(self):
+        return self.health > 0
